@@ -1,0 +1,3 @@
+﻿  test.c
+C:\Users\Administrator\Desktop\C语言\black\test_7_29\test.c(20,13): warning C4101: “s2”: 未引用的局部变量
+  test_7_29.vcxproj -> C:\Users\Administrator\Desktop\C语言\black\test_7_29\x64\Debug\test_7_29.exe
