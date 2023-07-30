@@ -1,27 +1,29 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
-
-struct Stu
-{
-	char name[20];//名字
-	int age;//年龄
-	char sex[10];//性别
-
-};
-
-typedef struct Node//结构体自引用
-{
-	int date;
-	struct Node* next;
-}Node;
+#include <string.h>
 
 int main()
 {
-	struct Stu s2;
-	//结构体初始化
-	struct Stu s1 = { "张三",23,"男" };
-	printf("%s %d\n", s1.name, s1.age);
-
+	char password[20] = { 0 };
+	int i = 0;
+	for (i = 0; i < 3; i++)
+	{
+		printf("请输入密码：");
+		scanf("%s", &password);
+		if (strcmp(password, "123456") == 0)
+		{
+			printf("登入成功\n");
+			break;
+		}
+		else
+		{
+			printf("输入密码错误，请重新输入:\n");
+		}
+	}
+	if (i == 3)
+	{
+		printf("三次密码均错误，退出程序\n");
+	}
 	return 0;
 }
 
