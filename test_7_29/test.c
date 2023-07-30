@@ -2,28 +2,71 @@
 #include <stdio.h>
 #include <string.h>
 
+//enum Sex
+//{
+//	Male,
+//	Female,
+//	Secret
+//};
+//
+//enum Color
+//{
+//	Red,
+//	Green,
+//	Blue
+//};
+//
+//int main()
+//{
+//	enum Sex s = Male;
+//	enum Color c = Blue;
+//
+//
+//	return 0;
+//}
+
+
+
+//联合体
+
+//union Un
+//{
+//	char c;
+//	int i;
+//};
+//int main()
+//{
+//	union Un u;
+//	printf("%d\n", sizeof(u));
+//
+//	return 0;
+//}
+
+int check_sys()
+{
+	/*int a = 1;
+	return *(char*)&a;*/
+
+	union Un
+	{
+		char c;
+		int i;
+	}u;
+	u.i = 1;
+	return u.c;//返回1，小端；返回0，大端
+}
+
 int main()
 {
-	char password[20] = { 0 };
-	int i = 0;
-	for (i = 0; i < 3; i++)
+	int a = 1;
+	int ret = check_sys();
+	if (1 == ret)
 	{
-		printf("请输入密码：");
-		scanf("%s", &password);
-		if (strcmp(password, "123456") == 0)
-		{
-			printf("登入成功\n");
-			break;
-		}
-		else
-		{
-			printf("输入密码错误，请重新输入:\n");
-		}
+		printf("小端\n");
 	}
-	if (i == 3)
+	else
 	{
-		printf("三次密码均错误，退出程序\n");
+		printf("大端\n");
 	}
-	return 0;
 }
 
