@@ -1,5 +1,5 @@
 //º¯ÊıÖ÷Ìå
-#include "game.h"
+#include "Game.h"
 #include <stdio.h>
 
 

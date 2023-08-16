@@ -1,5 +1,5 @@
 //º¯Êý¶¨Òå
-#include "game.h"
+#include "Game.h"
 
 
 void InitBoard(char board[ROWS][COLS], int rows, int cols, char set)
